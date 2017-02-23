@@ -1,0 +1,17 @@
+{
+    "name": "xorik/omnipay-paymaster",
+    "description": "Implement paymaster for the omnipay (Russian payment system)",
+    "require": {
+        "omnipay/common": "^2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Smelov",
+            "email": "xor29a@bk.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Paymaster\\" : "src/" }
+    }
+}
