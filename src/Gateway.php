@@ -2,6 +2,7 @@
 namespace Omnipay\Paymaster;
 
 use Omnipay\Common\AbstractGateway;
+use Omnipay\Paymaster\Message\CompletePurchaseRequest;
 use Omnipay\Paymaster\Message\PurchaseRequest;
 
 class Gateway extends AbstractGateway
@@ -50,12 +51,13 @@ class Gateway extends AbstractGateway
         return $this->getParameter('hashing_algorithm');
     }
 
-    /**
-     * @param array $options
-     * @return PurchaseRequest
-     */
     public function purchase(array $options = array())
     {
         return $this->createRequest(PurchaseRequest::class, $options);
+    }
+
+    function completePurchase(array $options = array())
+    {
+        return $this->createRequest(CompletePurchaseRequest::class, $options);
     }
 }
